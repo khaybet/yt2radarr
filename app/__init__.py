@@ -7,7 +7,7 @@ def create_app():
         static_folder="static"
     )
 
-    from .routes import main
+    from routes import main
     app.register_blueprint(main)
 
     return app
