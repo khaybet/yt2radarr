@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>yt2radarr</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>yt2radarr</h1>
+
+    <form method="POST">
+        <input type="text" name="url" placeholder="YouTube URL">
+        <button type="submit">Download & Send</button>
+    </form>
+
+    {% if result %}
+        <div class="result">{{ result }}</div>
+    {% endif %}
+</body>
+</html>
