@@ -1,5 +1,8 @@
 FROM python:3.11-slim
 
+# Install system dependencies BEFORE Python packages
+RUN apt-get update && apt-get install -y ffmpeg nodejs npm
+
 WORKDIR /app
 
 COPY requirements.txt .
